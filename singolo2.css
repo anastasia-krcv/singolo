@@ -1,0 +1,141 @@
+/* BASE */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1020px;
+    margin: 0 auto;
+    font-family: "Lato", "Verdana", sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 940px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    padding-top: 60px;
+    padding-bottom: 18px;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -0.2px;
+    color: #666d89;
+}
+
+h3 {
+    max-height: 21px;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.2px;
+    color: #666d89;
+    overflow: hidden;
+}
+
+p {
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #767e9e;
+}
+
+.button {
+    padding: 0 7px;
+    font-family: "Lato", "Verdana", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #767e9e;
+    background-color: #2d303a;
+    border: 1px solid #666d89;
+    border-radius: 5px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button_active {
+    color: #dedede;
+    border: 1px solid #c5c5c5;
+}
+
+
+
+/* PORTFOLIO */
+
+.portfolio {
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;
+}
+
+.portfolio-navigation {
+    padding: 11px 0 18px 0;
+}
+
+.portfolio-navigation__item {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.portfolio-block {
+    padding-bottom: 67px;
+}
+
+.layout-12-column {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+.column-3 {
+    grid-column: span 3;
+}
+
+.column-4 {
+    grid-column: span 4;
+}
+
+.portfolio__img {
+    display: block;
+}
+
+
+/* ABOUT US */
+
+.about {
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #ffffff;
+}
+
+.about__content {
+    padding: 44px 0 67px 0;
+}
+
+.photo-img {
+    padding-bottom: 13px;
+}
+
+.about__text {
+    padding: 10px 0 24px 0;
+    max-height: 59px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.8;
+    overflow: hidden;
+}
+
+.social-icon__link {
+    margin-right: 5px;
+}
