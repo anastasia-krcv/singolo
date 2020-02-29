@@ -22,6 +22,8 @@ li {
 
 a {
     text-decoration: none;
+    outline: transparent;
+    transition: all 0.3s;
 }
 
 h2 {
@@ -37,7 +39,7 @@ h3 {
     max-height: 21px;
     font-size: 18px;
     font-weight: 900;
-    line-height: 1.08;
+    line-height: 18px;
     letter-spacing: -0.2px;
     color: #666d89;
     overflow: hidden;
@@ -52,7 +54,7 @@ p {
 }
 
 .button {
-    padding: 0 7px;
+    padding: 0 6px;
     font-family: "Lato", "Verdana", sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -62,8 +64,14 @@ p {
     border: 1px solid #666d89;
     border-radius: 5px;
     box-shadow: none;
+    outline: transparent;
     cursor: pointer;
     transition: all 0.3s;
+}
+
+.button:hover, .button:focus, .button:active {
+    color: #dedede;
+    border-color: #dedede;   
 }
 
 .button_active {
@@ -71,17 +79,31 @@ p {
     border: 1px solid #c5c5c5;
 }
 
+.button_active:hover, .button_active:focus, .button_active:active {
+    color: #767e9e;;
+    border-color: #666d89;
+}
+
 
 
 /* PORTFOLIO */
 
 .portfolio {
+    padding-bottom: 67px;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
 }
 
 .portfolio-navigation {
-    padding: 11px 0 18px 0;
+    padding: 10px 0 19px 0;
+}
+
+.portfolio-navigation__list {
+    margin-left: 1px;
+}
+
+.portfolio-navigation__item:last-child > .button {
+    padding: 0 5px;
 }
 
 .portfolio-navigation__item {
@@ -90,7 +112,8 @@ p {
 }
 
 .portfolio-block {
-    padding-bottom: 67px;
+    max-height: 601px;
+    overflow: hidden;
 }
 
 .layout-12-column {
@@ -124,7 +147,11 @@ p {
 }
 
 .photo-img {
-    padding-bottom: 13px;
+    padding-bottom: 14px;
+}
+
+.column-4:nth-child(2) > .photo-img {
+    margin-left: -1px;
 }
 
 .about__text {
@@ -132,10 +159,18 @@ p {
     max-height: 59px;
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.8;
+    line-height: 21px;
     overflow: hidden;
 }
 
 .social-icon__link {
     margin-right: 5px;
+}
+
+.social-icon__link:hover, .social-icon__link:focus, .social-icon__link:active{
+    opacity: 0.5;
+}
+
+.column-4:first-child >.social{
+    margin-left: 1px;
 }
