@@ -1,1 +1,1 @@
-# singolo
+[Singolo full](https://anastasia-krcv.github.io/singolo/)
