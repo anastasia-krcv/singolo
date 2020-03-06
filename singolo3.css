@@ -1,0 +1,242 @@
+/* BASE */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1020px;
+    margin: 0 auto;
+    font-family: "Lato", "Verdana", sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 940px;
+}
+
+a {
+    text-decoration: none;
+    outline: transparent;
+    transition: all 0.3s;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -0.2px;
+    line-height: 17.86px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 18px;
+    letter-spacing: -0.2px;
+}
+
+p {
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+
+.button {
+    padding: 0 6px;
+    font-family: "Lato", "Verdana", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #767e9e;
+    background-color: #2d303a;
+    border: 1px solid #666d89;
+    border-radius: 5px;
+    box-shadow: none;
+    outline: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button:hover, .button:focus, .button:active {
+    color: #dedede;
+    border-color: #dedede;   
+}
+
+.button_active {
+    color: #dedede;
+    border: 1px solid #c5c5c5;
+}
+
+.button_active:hover, .button_active:focus, .button_active:active {
+    color: #767e9e;;
+    border-color: #666d89;
+}
+
+input {
+    margin-bottom: 16px;
+    padding: 0 14px 1px;
+    height: 38px;
+}
+
+input, textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 12px;
+    color: #f0d8d9;
+    background-color: #d6564f;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    display: block;
+    padding: 12px 14px;
+    height: 202px;
+    resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #f48c8f;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.input-name__error, .input-email__error {
+    display: none;
+    position: absolute;
+    margin: -16px 14px;
+    font-size: 12px;
+}
+
+input:invalid:not(:placeholder-shown) + .input-email__error, 
+input:invalid:not(:placeholder-shown) + .input-name__error {
+    display: block;
+}
+
+input:focus, input:hover, input:active, 
+textarea:focus, textarea:hover, textarea:active {
+    color: #f0d8d9;
+    outline: transparent;
+}
+
+
+/* GET A QUOTE */
+
+.get-a-quote {
+    padding-bottom: 67px;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+    color: #f0d8d9;
+}
+
+.get-a-quote__title {
+    padding: 62px 0 21px;
+    line-height: 30px;
+}
+
+.contact {
+    padding-top: 44px;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    grid-gap: 12px;
+}
+
+.contact-form__button {
+    padding-top: 16px;
+}
+
+.contact-form__button > .button {
+    padding: 5px 14px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contact-info {
+    padding-left: 9px;
+}
+
+.contact-info__title {
+    letter-spacing: -0.1px;
+}
+
+.contact-info__text {
+    padding: 10px 0 24px;
+}
+
+.contact-info__text, .contact-info__block > p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21.56px;
+}
+
+.phone > a, .email > a {
+    color: #f0d8d9;
+}
+
+.email {
+    padding-top: 1px;
+}
+
+.address::before, .phone::before, .email::before {
+    content: "";
+    display: block;
+    float: left;
+    width: 13px;
+    height: 11px;
+    margin: 5px 10px 0 0;
+}
+
+.address::before {
+    background: url(./assets/img/icon/location.png) no-repeat;
+    background-position: center;
+}
+.phone::before { 
+    background: url(./assets/img/icon/phone.png) no-repeat;
+    background-position: center;
+}
+.email::before {
+    margin-top: 6px;  
+    background: url(./assets/img/icon/mail.png) no-repeat;
+    background-position: center;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 22px 0 18.5px;
+    color: #666d89;
+    background-color: #2d303a;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 7fr 3fr;
+}
+
+.footer__copy {
+    grid-column: 1 / span 1;
+    font-size: 12px;
+    align-self: center;
+    margin: 0 0 5px 2px;
+    letter-spacing: -0.2px;
+}
+
+.footer__social {
+    grid-column: 3 / span 1;
+    justify-self: end;
+}
+
+.footer__social > .social-icon__link {
+    margin-left: 5px;
+    grid-column: 9 / span 3;
+}
+
+.social-icon__link:hover, .social-icon__link:focus, .social-icon__link:active{
+    opacity: 0.4;
+}
