@@ -16,12 +16,12 @@
             <div class="contact">
                 <div class="contact-form">
                     <form action="#" method="post">
-                        <input type="text" name="name" placeholder="Name (Required)" required>
-                        <input type="email" name="email" placeholder="Email (Required)" required>
+                        <input type="text" name="name" placeholder="Name (Required)" pattern="[A-Z][a-z]{1,}" required><span class="input-name__error">Please enter correct name</span>
+                        <input type="email" name="email" placeholder="Email (Required)" required><span class="input-email__error">Please enter a valid address (any@any.any)</span>
                         <input type="text" name="subject" placeholder="Subject">
                         <textarea name="describe" placeholder="Describe your project in detail..."></textarea>
                         <div class="contact-form__button">
-                            <button class="button">Send</button>
+                            <button class="button">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -40,7 +40,7 @@
     <footer>
         <div class="wrapper footer-grid">
             <span class="footer__copy">&copy; Copyright 2013</span>
-            <div class="social">
+            <div class="social footer__social">
                 <a href="#" class="social-icon__link"><img src="./assets/img/icon/facebook.png" alt="Facebook" class="social-icon__img"></a>
                 <a href="#" class="social-icon__link"><img src="./assets/img/icon/google.png" alt="Google" class="social-icon__img"></a>
                 <a href="#" class="social-icon__link"><img src="./assets/img/icon/twitter.png" alt="Twitter" class="social-icon__img"></a>
