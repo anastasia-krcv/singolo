@@ -263,7 +263,7 @@ header h1::after {
 
 .slider-grid {
     display: grid;
-    grid-template-columns: 0.5fr 4fr 7fr 0.5fr;
+    grid-template-columns: 0.5fr 11fr 0.5fr;
     grid-template-rows: 1fr;
     min-height: 594px;
 }
@@ -287,9 +287,22 @@ header h1::after {
     justify-self: right;
 }
 
+/* --------------------------------- */
+
+.phones {
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+}
+
+.screen_disable {
+    display: none;
+}
+
+/* --------------------------------- */
+
 .phone-vertical {
     position: relative;
-    padding: 53px 0 0 33px;
+    padding: 53px 33px;
 }
 
 .phone-horizontal {

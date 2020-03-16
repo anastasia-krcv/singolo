@@ -9,37 +9,39 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <div class="wrapper header-grid">
             <h1><a href="#" class="logo">Singolo</a></h1>
             <nav class="navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link active">Home</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Services</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Portfolio</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+                    <li class="navigation__item"><a href="#header" class="navigation__link active">Home</a></li>
+                    <li class="navigation__item"><a href="#services" class="navigation__link">Services</a></li>
+                    <li class="navigation__item"><a href="#portfolio" class="navigation__link">Portfolio</a></li>
+                    <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#get-a-quote" class="navigation__link">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="slider">
+    <section id="slider" class="slider">
         <div class="wrapper slider-grid">
             <a href="#" class="arrow arrow_left"></a>
-            <div class="phone-vertical">
-                <img src="./assets/img/shadow.png" alt="Shadow" class="phone-vertical__shadow">
-                <img src="./assets/img/phone-base.png" alt="Phone" class="phone-vertical__base">
-                <img src="./assets/img/screen-vertical.jpg" alt="Screen" class="phone-vertical__screen">
-            </div>
-            <div class="phone-horizontal">
-                <img src="./assets/img/shadow.png" alt="Shadow" class="phone-horizontal__shadow">
-                <img src="./assets/img/phone-base.png" alt="Phone" class="phone-horizontal__base">
-                <img src="./assets/img/screen-horizontal.jpg" alt="Screen" class="phone-horizontal__screen">
+            <div class="phones">
+                <div class="phone-vertical">
+                    <img src="./assets/img/shadow.png" alt="Shadow" class="phone-vertical__shadow">
+                    <img src="./assets/img/phone-base.png" alt="Phone" class="phone-vertical__base">
+                    <img src="./assets/img/screen-vertical.jpg" alt="Screen" class="phone-vertical__screen screen">
+                </div>
+                <div class="phone-horizontal">
+                    <img src="./assets/img/shadow.png" alt="Shadow" class="phone-horizontal__shadow">
+                    <img src="./assets/img/phone-base.png" alt="Phone" class="phone-horizontal__base">
+                    <img src="./assets/img/screen-horizontal.jpg" alt="Screen" class="phone-horizontal__screen screen">
+                </div>
             </div>
             <a href="#" class="arrow arrow_right"></a>
         </div>
     </section>
-    <section class="services">
+    <section id="services" class="services">
         <div class="wrapper">
             <h2>Our Services</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -89,7 +91,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="wrapper">
             <h2>Portfolio</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -141,7 +143,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section id="about" class="about">
         <div class="wrapper">
             <h2>About Us</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -182,7 +184,7 @@
             </div>
         </div>
     </section>
-    <section class="get-a-quote">
+    <section id="get-a-quote" class="get-a-quote">
         <div class="wrapper">
             <h2 class="get-a-quote__title">Get a Quote</h2>
             <p class="get-a-quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -221,5 +223,6 @@
             </div>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
