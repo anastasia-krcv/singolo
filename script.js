@@ -6,6 +6,9 @@ window.onload = function() {
     // off/on phone screen 
     addPhoneScreenClickHandler();
 
+    // portfolio tags navigation
+    document.querySelector('.portfolio-navigation__list').addEventListener('click', addTagsHandler);
+
     // modal
     openModal();
     closeModal();
@@ -20,15 +23,21 @@ const onScroll = () => {
     let sections = document.querySelectorAll('body > section');
     let links = document.querySelectorAll('.navigation a');
 
+    let pageHeight = document.documentElement.scrollHeight;
+    let scrollHeightToBottom = window.scrollY + document.documentElement.clientHeight;
+
     sections.forEach((item) => {     
         if(item.offsetTop <= currentPosition && (item.offsetTop + item.offsetHeight) > currentPosition) {
             links.forEach((a) => {
                 a.classList.remove('active');
-                if(item.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                if(scrollHeightToBottom === pageHeight) {
+                    links[links.length - 1].classList.add('active');
+                } 
+                else if(item.getAttribute('id') === a.getAttribute('href').substring(1)) {
                     a.classList.add('active');
                 }
             })
-        }
+        }     
     })
 }
 
@@ -118,9 +127,51 @@ const addPhoneScreenClickHandler = () => {
 }
 
 
-
 // Portfolio tags
 
+const addTagsHandler = (e) => { 
+    let clickedTag = e.target;
+    if(clickedTag.tagName === 'SPAN' && !clickedTag.classList.contains('tag_active')) {
+        removeSelectedTags();
+        selectClickedTag(clickedTag);
+ 
+        const arts = document.querySelectorAll('.art');
+        const shuffleArts = shuffle(artsArr);
+        
+        arts.forEach((art, index) => {
+            art.outerHTML = shuffleArts[index].outerHTML;
+        })
+    }
+}
+
+
+const removeSelectedTags = () => {
+    let tags = document.querySelectorAll('.tag');
+    tags.forEach(tag => {          
+        tag.classList.remove('tag_active');
+        tag.classList.add('tag_not-active');
+    });
+}
+
+
+const selectClickedTag = (clickedTag) => {
+    clickedTag.classList.add('tag_active');
+    clickedTag.classList.remove('tag_not-active');
+}
+
+
+const artsArr = [...document.querySelectorAll('.art')];
+
+const shuffle = (artsArr) => {
+	let j, temp;
+	for(let i = artsArr.length - 1; i > 0; i--){
+		j = Math.floor(Math.random() * (i + 1));
+		temp = artsArr[j];
+		artsArr[j] = artsArr[i];
+		artsArr[i] = temp;
+	}
+	return artsArr;
+}
 
 
 // Arts border
