@@ -131,17 +131,20 @@ const addPhoneScreenClickHandler = () => {
 
 const addTagsHandler = (e) => { 
     let clickedTag = e.target;
-    if(clickedTag.tagName === 'SPAN' && !clickedTag.classList.contains('tag_active')) {
-        removeSelectedTags();
-        selectClickedTag(clickedTag);
- 
-        const arts = document.querySelectorAll('.art');
-        const shuffleArts = shuffle(artsArr);
-        
-        arts.forEach((art, index) => {
-            art.outerHTML = shuffleArts[index].outerHTML;
-        })
+    if(!clickedTag.classList.contains('tag_active')) {
+        if(clickedTag.tagName === 'SPAN') {
+            removeSelectedTags();
+            selectClickedTag(clickedTag);
+    
+            const arts = document.querySelectorAll('.art');
+            const shuffleArts = shuffle(artsArr);
+            
+            arts.forEach((art, index) => {
+                art.outerHTML = shuffleArts[index].outerHTML;
+            })
+        }
     }
+    
 }
 
 
