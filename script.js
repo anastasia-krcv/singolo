@@ -2,6 +2,10 @@ window.onload = function() {
 
     // transition to blocks
     document.addEventListener('scroll', onScroll);
+
+    // burger menu
+    openBurger();
+    closeBurger();
    
     // off/on phone screen 
     addPhoneScreenClickHandler();
@@ -39,6 +43,32 @@ const onScroll = () => {
             })
         }     
     })
+}
+
+// Hamburger active
+const burgerButton = document.querySelector('.burger');
+const nav = document.querySelector('.navigation');
+
+const openBurger = () => {   
+    burgerButton.addEventListener('click', (e) => {
+        toggleBurgerClasses();
+    })
+}
+
+const closeBurger = () => {
+    nav.addEventListener('click', (e) => {
+        let clickedLink = e.target;
+        if(clickedLink.tagName === 'A') {
+            toggleBurgerClasses();
+        }
+    })
+}
+
+const toggleBurgerClasses = () => {
+    burgerButton.classList.toggle('burger_rotate');
+    document.querySelector('#cover').classList.toggle('cover');
+    document.querySelector('#header__title').classList.toggle('burger__title');
+    nav.classList.toggle('visible');
 }
 
 
@@ -202,7 +232,7 @@ const openModal = () => {
         e.preventDefault();
         addModalSubjectText();
         addModalDescribeText();
-        document.querySelector('#modal').classList.remove('modal_hidden');
+        document.querySelector('#modal').classList.remove('hidden');
         document.querySelector('#cover').classList.add('cover');
                     
     })     
@@ -234,7 +264,7 @@ const closeModal = () => {
 
     modal.addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector('#modal').classList.add('modal_hidden');
+        document.querySelector('#modal').classList.add('hidden');
         document.querySelector('#cover').classList.remove('cover');
         form.reset();          
     })  
