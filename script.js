@@ -4,8 +4,7 @@ window.onload = function() {
     document.addEventListener('scroll', onScroll);
 
     // burger menu
-    openBurger();
-    closeBurger();
+    burgerActive();
    
     // off/on phone screen 
     addPhoneScreenClickHandler();
@@ -48,6 +47,13 @@ const onScroll = () => {
 // Hamburger active
 const burgerButton = document.querySelector('.burger');
 const nav = document.querySelector('.navigation');
+
+const burgerActive = () => {
+    if (document.documentElement.clientWidth < 768) {
+        openBurger();
+        closeBurger();
+    }
+}
 
 const openBurger = () => {   
     burgerButton.addEventListener('click', (e) => {

@@ -394,7 +394,7 @@ textarea:active {
     .navigation {
         display: none;
         position: absolute;
-        width: 74vw;
+        width: 278px;
         height: 100vh;
         top: 0;
         left: 0;
